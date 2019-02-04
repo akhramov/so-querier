@@ -1,0 +1,29 @@
+* StackOverflow tags querier
+
+** Description
+
+It is a simple application designed to query for StackOverflow
+questions with given tags. The application provides a brief statistic
+alongside query results.
+
+** Usage
+
+In order to run this application you need to have Leiningen
+installed. Simply run following command in a shell:
+
+#+BEGIN_SRC csh
+% lein run
+#+END_SRC
+
+That's it. Application should be up and running on port 3000.
+Applications interface is simple and best described by examples:
+
+*** Search for questions tagged with ~clojure~
+#+BEGIN_SRC
+% curl "localhost:3000/search?tag=clojure"
+#+END_SRC
+
+*** Search for questions tagged with ~clojure~ and ~scala~
+#+BEGIN_SRC
+% curl "localhost:3000/search?tag=clojure&tag=scala"
+#+END_SRC
